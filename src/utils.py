@@ -57,10 +57,10 @@ class SearchAPI():
         """
         result = self.dataset
         for query in args:
-            result = self.filtering(query, result)
+            result = self._filtering(query, result)
         return result
     
-    def filtering(self, query, dataset):
+    def _filtering(self, query, dataset):
         return [d for d in dataset if query in fix_data(d)]
     
     
