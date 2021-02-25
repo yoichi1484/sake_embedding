@@ -43,6 +43,8 @@ pprint.pprint(results[0], width=40)
 ## Examples of sake-analogy
 - Input sake: "金鵄正宗_純米大吟醸_祝"
 ```python
+# About "金鵄正宗_純米大吟醸_祝"
+
 {'alcohol_rate': {'max': '16.00',
                   'mean': '16.50',
                   'min': '17.00'},
