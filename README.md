@@ -8,7 +8,7 @@ $ git clone https://github.com/yoichi1484/sake_dataset
 $ cp sake_dataset/json/sake_dataset_v1.json ./
 ```
 # Usage
-## Training sake embedding with gensim
+## Training sake embeddings with gensim
 ```
 python train.py
 ```
