@@ -40,8 +40,35 @@ pprint.pprint(results[0], width=40)
  ...
  }
 ```
-## Analogy example
-- Change the type of rice
+## Examples of sake-analogy
+- Input sake: "金鵄正宗_純米大吟醸_祝"
+```python
+{'alcohol_rate': {'max': '16.00',
+                  'mean': '16.50',
+                  'min': '17.00'},
+ 'amino_acid_content': {'max': '1.10',
+                        'mean': '1.10',
+                        'min': '1.10'},
+ 'brand': '金鵄正宗',
+ 'brand+name': '金鵄正宗 純米大吟醸 祝',
+ 'brewer': 'キンシ正宗',
+ 'city': '京都市伏見区',
+ 'dgree_of_sweetness/dryness': '0.11',
+ 'method_for_making_sake': [],
+ 'name': '純米大吟醸 祝',
+ 'prefecture': '京都府',
+ 'rice': ['祝'],
+ 'rice_polishing_rate': '45',
+ 'sake_class': '純米大吟醸',
+ 'sake_meter_value': {'max': '1.00',
+                      'mean': '1.00',
+                      'min': '1.00'},
+ 'titratable_acidity': {'max': '1.20',
+                        'mean': '1.20',
+                        'min': '1.20'},
+ 'yeast': []}
+```
+### 1. Change rice
 - ```[brand+name] - [rice] + [rice]```
 - "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
 - "松屋久兵衛" is a sake brewed by "キンシ正宗", which is the same brewery as "金鵄正宗_純米大吟醸_祝", but the rice is changed as "祝"
@@ -59,7 +86,7 @@ result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_�
  ('brand+name:北洋_袋取り雫酒', 0.44058412313461304)]
  
 # Search about 'brand:松屋久兵衛'
-target = result[0][0]
+target = 'brand:松屋久兵衛'
 results = api.and_search(target)
 pprint.pprint(results[0], width=40)
 
@@ -87,4 +114,45 @@ pprint.pprint(results[0], width=40)
                        'mean': '1.20',
                        'min': '1.20'},
 'yeast': []}
+```
+
+### 2. Rice_polishing_rate
+- ```[brand+name] - [rice_polishing_rate] + [rice_polishing_rate]```
+```python
+# Analogy: change the type of rice
+result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], negative=['rice_polishing_rate:45'], topn=3)
+
+[('brand+name:金鵄正宗_特別純米', 0.6118292808532715),
+ ('brand+name:金閣_荒武者', 0.571118950843811),
+ ('brand+name:松屋久兵衛', 0.566016674041748)]
+
+# Search about 'brand+name:金鵄正宗_特別純米'
+target = 'brand+name:金鵄正宗_特別純米'
+results = api.and_search(target)
+pprint.pprint(results[0], width=40)
+
+{'alcohol_rate': {'max': '15.00',
+                  'mean': '15.50',
+                  'min': '16.00'},
+ 'amino_acid_content': {'max': '1.30',
+                        'mean': '1.30',
+                        'min': '1.30'},
+ 'brand': '金鵄正宗',
+ 'brand+name': '金鵄正宗 特別純米',
+ 'brewer': 'キンシ正宗',       # Same brewer as 'brand+name:金鵄正宗_純米大吟醸_祝'
+ 'city': '京都市伏見区',
+ 'dgree_of_sweetness/dryness': '-0.17',
+ 'method_for_making_sake': [],
+ 'name': '特別純米',
+ 'prefecture': '京都府',
+ 'rice': ['五百万石'],
+ 'rice_polishing_rate': '60', # The rice polishing rate is changed
+ 'sake_class': '特別純米',
+ 'sake_meter_value': {'max': '1.50',
+                      'mean': '1.50',
+                      'min': '1.50'},
+ 'titratable_acidity': {'max': '1.40',
+                        'mean': '1.40',
+                        'min': '1.40'},
+ 'yeast': []}
 ```
