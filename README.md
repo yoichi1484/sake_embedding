@@ -53,38 +53,38 @@ api = utils.SearchAPI()
 
 # Analogy: change the type of rice
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice:山田錦'], negative=['rice:祝'], topn=3)
-# result
-# [('brand:松屋久兵衛', 0.45839840173721313), # most similar word
-#  ('brand:切子', 0.4513291120529175),
-#  ('brand+name:北洋_袋取り雫酒', 0.44058412313461304)]
+
+[('brand:松屋久兵衛', 0.45839840173721313), # most similar word
+ ('brand:切子', 0.4513291120529175),
+ ('brand+name:北洋_袋取り雫酒', 0.44058412313461304)]
  
 # Search about 'brand:松屋久兵衛'
 target = result[0][0]
 results = api.and_search(target)
 pprint.pprint(results[0], width=40)
 
-# {'alcohol_rate': {'max': '16.00',
-#                   'mean': '16.50',
-#                   'min': '17.00'},
-#  'amino_acid_content': {'max': '1.10',
-#                         'mean': '1.10',
-#                         'min': '1.10'},
-#  'brand': '松屋久兵衛',
-#  'brand+name': '松屋久兵衛 ',
-#  'brewer': 'キンシ正宗',       # Same brewer as 'brand+name:金鵄正宗_純米大吟醸_祝'
-#  'city': '京都市伏見区',
-#  'dgree_of_sweetness/dryness': '0.11',
-#  'method_for_making_sake': [],
-#  'name': '',
-#  'prefecture': '京都府',
-#  'rice': ['山田錦'],          # Type of the rice is changed by the analogy
-#  'rice_polishing_rate': '35',
-#  'sake_class': '純米大吟醸',
-#  'sake_meter_value': {'max': '1.00',
-#                       'mean': '1.00',
-#                       'min': '1.00'},
-#  'titratable_acidity': {'max': '1.20',
-#                         'mean': '1.20',
-#                         'min': '1.20'},
-#  'yeast': []}
+{'alcohol_rate': {'max': '16.00',
+                 'mean': '16.50',
+                 'min': '17.00'},
+'amino_acid_content': {'max': '1.10',
+                       'mean': '1.10',
+                       'min': '1.10'},
+'brand': '松屋久兵衛',
+'brand+name': '松屋久兵衛 ',
+'brewer': 'キンシ正宗',       # Same brewer as 'brand+name:金鵄正宗_純米大吟醸_祝'
+'city': '京都市伏見区',
+'dgree_of_sweetness/dryness': '0.11',
+'method_for_making_sake': [],
+'name': '',
+'prefecture': '京都府',
+'rice': ['山田錦'],          # Type of the rice is changed by the analogy
+'rice_polishing_rate': '35',
+'sake_class': '純米大吟醸',
+'sake_meter_value': {'max': '1.00',
+                     'mean': '1.00',
+                     'min': '1.00'},
+'titratable_acidity': {'max': '1.20',
+                       'mean': '1.20',
+                       'min': '1.20'},
+'yeast': []}
 ```
