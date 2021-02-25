@@ -1,6 +1,7 @@
 import json
 import pprint
 from gensim.models import word2vec
+import utils
 
 
 def main():
