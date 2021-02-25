@@ -25,7 +25,7 @@ api = utils.SearchAPI()
 results = api.and_search("brand+name:美丈夫_大吟醸_薫", "dgree_of_sweetness/dryness:-0.08", "rice_polishing_rate:40")
 pprint.pprint(results[0], width=40)
 ```
-```json
+```JSON
 {'alcohol_rate': {'max': '',
                   'mean': '',
                   'min': ''},
