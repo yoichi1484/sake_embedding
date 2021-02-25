@@ -121,6 +121,11 @@ pprint.pprint(results[0], width=40)
 ### 2. Cange rice polishing rate
 - ```[brand+name] - [rice_polishing_rate] + [rice_polishing_rate]```
 ```python
+import utils
+import pprint
+model = utils.load_sake_embedding()
+api = utils.SearchAPI()
+
 # Analogy: change the type of rice
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], negative=['rice_polishing_rate:45'], topn=3)
 
