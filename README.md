@@ -3,11 +3,11 @@ WeSAKE: Word Embeddings of Sake
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
 # About
 - This tool enables **"sake operation"**
-  - The terms of sake are represented by a vector in an Euclidean space
-  - The sake embedding supports [14 categories](https://github.com/yoichi1484/sake_dataset).
-  - Change an attribute of the sake such as type of rice, yeast, and rice polishing rate
-- e.g., "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
-- e.g., "金鵄正宗_純米大吟醸_祝" - "精米歩合45%" + "精米歩合60%" = "金鵄正宗_特別純米"
+- The terms of sake are represented by a vector in an Euclidean space
+- The sake embedding supports [14 categories](https://github.com/yoichi1484/sake_dataset).
+- Change an attribute of the sake such as type of rice, yeast, and rice polishing rate
+  - e.g., "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
+  - e.g., "金鵄正宗_純米大吟醸_祝" - "精米歩合45%" + "精米歩合60%" = "金鵄正宗_特別純米"
 
 # Setup
 - Download  **sake dataset** from [here](https://github.com/yoichi1484/sake_dataset)
