@@ -119,7 +119,7 @@ pprint.pprint(results[0], width=40)
 'yeast': []}
 ```
 
-## 2. Cange rice polishing rate
+## 2. Change rice polishing rate
 - ```[brand+name] - [rice_polishing_rate A] + [rice_polishing_rate B]```
 - 45% -> 60%
 ```python
