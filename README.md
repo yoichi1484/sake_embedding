@@ -40,7 +40,7 @@ pprint.pprint(results[0], width=40)
  ...
  }
 ```
-## Examples of sake-analogy
+# Examples of sake-analogy
 - Input sake: "金鵄正宗_純米大吟醸_祝"
 ```python
 # About "金鵄正宗_純米大吟醸_祝"
@@ -70,7 +70,7 @@ pprint.pprint(results[0], width=40)
                         'min': '1.20'},
  'yeast': []}
 ```
-### 1. Change rice
+## 1. Change rice
 - ```[brand+name] - [rice] + [rice]```
 - "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
 - "松屋久兵衛" is a sake brewed by "キンシ正宗", which is the same brewery as "金鵄正宗_純米大吟醸_祝", but the rice is changed as "祝"
@@ -118,7 +118,7 @@ pprint.pprint(results[0], width=40)
 'yeast': []}
 ```
 
-### 2. Cange rice polishing rate
+## 2. Cange rice polishing rate
 - ```[brand+name] - [rice_polishing_rate] + [rice_polishing_rate]```
 ```python
 import utils
