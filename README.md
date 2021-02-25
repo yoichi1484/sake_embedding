@@ -73,6 +73,7 @@ pprint.pprint(results[0], width=40)
 ## 1. Change rice
 - ```[brand+name] - [rice] + [rice]```
 - "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
+- "山田錦" -> "祝"
 - "松屋久兵衛" is a sake brewed by "キンシ正宗", which is the same brewery as "金鵄正宗_純米大吟醸_祝", but the rice is changed as "祝"
 ```python
 import utils
@@ -120,6 +121,7 @@ pprint.pprint(results[0], width=40)
 
 ## 2. Cange rice polishing rate
 - ```[brand+name] - [rice_polishing_rate] + [rice_polishing_rate]```
+- 45% -> 60%
 ```python
 import utils
 import pprint
