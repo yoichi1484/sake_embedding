@@ -1,7 +1,6 @@
-[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
-
 WeSAKE: Word Embeddings of Sake
 ====
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
 # Setup
 - Download  **sake dataset** from [here](https://github.com/yoichi1484/sake_dataset)
 ```
