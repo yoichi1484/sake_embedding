@@ -3,6 +3,9 @@ import pprint
 import json
 
 
+PATH_DATA = '../data/sake_dataset_v1.json'
+
+
 def preprocessing(sake_data):
     return sake_data.strip().replace(' ', '_')
     
@@ -23,7 +26,7 @@ def fix_data(data):
 
 
 def load_dataset():
-    with open('../data//sake_dataset/json/sake_dataset_v1.json') as f:
+    with open(PATH_DATA) as f:
         dataset = json.load(f)
     return dataset
 
