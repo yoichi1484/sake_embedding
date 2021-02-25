@@ -1,4 +1,4 @@
-WESAKE: Word Embeddings of Sake
+WeSAKE: Word Embeddings of Sake
 ====
 # Setup
 - Download  *sake dataset* from [here](https://github.com/yoichi1484/sake_dataset)
