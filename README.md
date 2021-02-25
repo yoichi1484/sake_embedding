@@ -44,7 +44,7 @@ pprint.pprint(results[0], width=40)
 - Change the type of rice
 - [brand+name] - [rice] + [rice]
 - "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
-  - The brewer is same, but the type of rice is changed.
+- "松屋久兵衛" is a sake brewed by "金鵄正宗" that is the same brewery as "金鵄正宗_純米大吟醸_祝", but the rice is changed as "祝"
 ```python
 import utils
 import pprint
