@@ -118,7 +118,7 @@ pprint.pprint(results[0], width=40)
 'yeast': []}
 ```
 
-### 2. Rice_polishing_rate
+### 2. Cange rice polishing rate
 - ```[brand+name] - [rice_polishing_rate] + [rice_polishing_rate]```
 ```python
 # Analogy: change the type of rice
