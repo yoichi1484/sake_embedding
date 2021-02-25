@@ -1,6 +1,12 @@
 WeSAKE: Word Embeddings of Sake
 ====
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
+# About
+- This tool enables "sake operation"
+  -  Change an attribute of the sake such as type of rice, yeast, and rice polishing rate
+- e.g., "金鵄正宗_純米大吟醸_祝" - "山田錦" + "祝" = "松屋久兵衛"
+- e.g., "金鵄正宗_純米大吟醸_祝" - "精米歩合45%" + "精米歩合60%" = "金鵄正宗_特別純米"
+
 # Setup
 - Download  **sake dataset** from [here](https://github.com/yoichi1484/sake_dataset)
 ```
@@ -128,7 +134,7 @@ import pprint
 model = utils.load_sake_embedding()
 api = utils.SearchAPI()
 
-# Analogy: change the type of rice
+# Analogy: change the rice polishing rate
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], negative=['rice_polishing_rate:45'], topn=3)
 
 [('brand+name:金鵄正宗_特別純米', 0.6118292808532715),
