@@ -5,6 +5,7 @@ WESAKE: Word Embeddings of Sake
 ```
 $ cd data
 $ git clone https://github.com/yoichi1484/sake_dataset
+$ cp sake_dataset/json/sake_dataset_v1.json ./
 ```
 # Usage
 ## Training sake embedding with gensim
