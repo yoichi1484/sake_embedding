@@ -25,7 +25,7 @@ python train.py
 ## Analogy of sake vectors
 ```python
 import utils
-model = utils.load_sake_embedding()
+model = utils.load_sake_embedding('model.txt')
 result = model.most_similar(positive=['brand:英勲', 'rice:山田錦'], 
                             negative=['rice:祝'], topn=1)
 result[0] # ('brand+name:美丈夫_大吟醸_薫', 0.465287983417511)
@@ -91,7 +91,7 @@ pprint.pprint(results[0], width=40)
 ```python
 import utils
 import pprint
-model = utils.load_sake_embedding()
+model = utils.load_sake_embedding('model.txt')
 api = utils.SearchAPI()
 
 # Analogy: change the type of rice
@@ -138,7 +138,7 @@ pprint.pprint(results[0], width=40)
 ```python
 import utils
 import pprint
-model = utils.load_sake_embedding()
+model = utils.load_sake_embedding('model.txt')
 api = utils.SearchAPI()
 
 # Analogy: change the rice polishing rate
