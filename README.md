@@ -6,9 +6,10 @@ Word Embeddings of Sake
 - The terms of sake are represented by a vector in an Euclidean space
 - The sake embedding supports [14 categories](https://github.com/yoichi1484/sake_dataset).
 - You can change categories of the sake such as type of rice, yeast, and rice polishing rate
-  - e.g., "金鵄正宗_純米大吟醸_祝" - "祝 (rice)" + "山田錦 (rice)" = "松屋久兵衛"
-  - e.g., "金鵄正宗_純米大吟醸_祝" - "精米歩合45%" + "精米歩合60%" = "金鵄正宗_特別純米"
-
+```
+玉乃光_純米大吟醸_京の琴_祝１００％ - 祝 + 雄町 = 玉乃光_純米大吟醸_備前雄町１００％
+金鵄正宗_純米大吟醸_祝 - 精米歩合45% + 精米歩合60% = 金鵄正宗_特別純米
+```
 # Setup
 - Download  **sake dataset** from [here](https://github.com/yoichi1484/sake_dataset)
 ```
