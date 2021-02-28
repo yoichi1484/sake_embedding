@@ -25,19 +25,19 @@ def fix_data(data):
     return fixed_data
 
 
-def load_dataset():
-    with open(PATH_DATA) as f:
+def load_dataset(path = PATH_DATA):
+    with open(path) as f:
         dataset = json.load(f)
     return dataset
 
 
-def load_sake_embedding():
-    return KeyedVectors.load_word2vec_format('model.txt')
+def load_sake_embedding(path):
+    return KeyedVectors.load_word2vec_format(path)
 
 
 class SearchAPI():
-    def __init__(self):
-        self.dataset = load_dataset()['dataset']
+    def __init__(self, path = PATH_DATA):
+        self.dataset = load_dataset(path)['dataset']
         
     def and_search(self, *args):
         """ This function returns sake data that contain the queries
