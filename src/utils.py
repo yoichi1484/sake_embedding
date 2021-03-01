@@ -21,7 +21,7 @@ def fix_data(data):
                 fixed_data.append('{}:{}'.format(k, _v))
         else:
             v = preprocessing(v)
-            fixed_data.append('{}:{}'.format(k, v.strip()))
+            fixed_data.append('{}:{}'.format(k, v))
     return fixed_data
 
 
