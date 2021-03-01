@@ -142,7 +142,8 @@ model = utils.load_sake_embedding('model.txt')
 api = utils.SearchAPI()
 
 # Analogy: change the rice polishing rate
-result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], negative=['rice_polishing_rate:45'], topn=3)
+result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], 
+                            negative=['rice_polishing_rate:45'], topn=3)
 
 [('brand+name:金鵄正宗_特別純米', 0.6118292808532715), # most similar word
  ('brand+name:金閣_荒武者', 0.571118950843811),
