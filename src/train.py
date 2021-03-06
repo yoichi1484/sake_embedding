@@ -24,11 +24,11 @@ def main(size, min_count, iter):
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--size', '-s', default=100, 
+    parser.add_argument('--size', '-s', default=100, type=int, 
                         help='Dimention of the embedding space. (default = 100)')
-    parser.add_argument('--min_count', '-m', default=0, 
+    parser.add_argument('--min_count', '-m', default=0, type=int, 
                         help=' Ignores all words with total frequency lower than this. (default = 0)')
-    parser.add_argument('--iter', '-i', default=100, 
+    parser.add_argument('--iter', '-i', default=100, type=int, 
                         help='Number of iteration (default = 0)')
     args = parser.parse_args()
     main(args.size, args.min_count, args.iter)
