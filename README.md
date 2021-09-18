@@ -39,6 +39,9 @@ query2 = "dgree_of_sweetness/dryness:-0.08"
 query3 = "rice_polishing_rate:40"
 results = api.and_search(query1, query2, query3)
 pprint.pprint(results[0], width=40)
+```
+Output
+```
 {'alcohol_rate': {'max': '',
                   'mean': '',
                   'min': ''},
@@ -97,10 +100,11 @@ api = utils.SearchAPI()
 # Analogy: change the type of rice
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 
                                       'rice:山田錦'], negative=['rice:祝'], topn=3)
-
+```
 [('brand:松屋久兵衛', 0.45839840173721313), # most similar word
  ('brand:切子', 0.4513291120529175),
  ('brand+name:北洋_袋取り雫酒', 0.44058412313461304)]
+```
  
 # Search about 'brand:松屋久兵衛'
 results = api.and_search('brand:松屋久兵衛')
