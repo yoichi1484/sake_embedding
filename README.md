@@ -101,15 +101,18 @@ api = utils.SearchAPI()
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 
                                       'rice:山田錦'], negative=['rice:祝'], topn=3)
 ```
+```
 [('brand:松屋久兵衛', 0.45839840173721313), # most similar word
  ('brand:切子', 0.4513291120529175),
  ('brand+name:北洋_袋取り雫酒', 0.44058412313461304)]
 ```
  
 # Search about 'brand:松屋久兵衛'
+```python
 results = api.and_search('brand:松屋久兵衛')
 pprint.pprint(results[0], width=40)
-
+```
+```
 {'alcohol_rate': {'max': '16.00',
                  'mean': '16.50',
                  'min': '17.00'},
@@ -148,15 +151,19 @@ api = utils.SearchAPI()
 # Analogy: change the rice polishing rate
 result = model.most_similar(positive=['brand+name:金鵄正宗_純米大吟醸_祝', 'rice_polishing_rate:60'], 
                             negative=['rice_polishing_rate:45'], topn=3)
-
+```
+```
 [('brand+name:金鵄正宗_特別純米', 0.6118292808532715), # most similar word
  ('brand+name:金閣_荒武者', 0.571118950843811),
  ('brand+name:松屋久兵衛', 0.566016674041748)]
+```
 
 # Search about 'brand+name:金鵄正宗_特別純米'
+```python
 results = api.and_search('brand+name:金鵄正宗_特別純米')
 pprint.pprint(results[0], width=40)
-
+```
+```
 {'alcohol_rate': {'max': '15.00',
                   'mean': '15.50',
                   'min': '16.00'},
