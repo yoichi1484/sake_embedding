@@ -83,7 +83,7 @@ pprint.pprint(results[0], width=40)
                         'min': '1.20'},
  'yeast': []}
 ```
-## 1. Change rice
+## Operation of sake vectors: Change rice
 - ```[brand+name] - [rice A] + [rice B]```
 - "金鵄正宗_純米大吟醸_祝" - "祝 (rice)" + "山田錦 (rice)" = "松屋久兵衛"
 - "祝" -> "山田錦"
@@ -132,7 +132,7 @@ pprint.pprint(results[0], width=40)
 'yeast': []}
 ```
 
-## 2. Change rice polishing rate
+## Operation of sake vectors: Change rice polishing rate
 - ```[brand+name] - [rice_polishing_rate A] + [rice_polishing_rate B]```
 - 45% -> 60%
 ```python
